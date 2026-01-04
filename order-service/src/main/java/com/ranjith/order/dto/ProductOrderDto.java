@@ -1,0 +1,35 @@
+package com.ranjith.order.dto;
+
+import java.time.LocalDateTime;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import lombok.Data;
+
+@Data
+public class ProductOrderDto {
+    private Long id; // optional for create, required for update
+
+    @NotNull(message = "Product ID is required")
+    private Long productId;
+
+    @NotBlank(message = "Customer name cannot be blank")
+    private String customerName;
+
+    @NotBlank(message = "Customer email is required")
+    @Email(message = "Invalid email format")
+    private String customerEmail;
+
+    @NotNull(message = "Quantity is required")
+    @Positive(message = "Quantity must be greater than zero")
+    private Integer quantity;
+
+    @NotNull(message = "Order date is required")
+    private LocalDateTime orderDate;
+
+    @NotBlank(message = "Order status is required")
+    private String status; // PENDING, COMPLETED, CANCELLED
+
+}
