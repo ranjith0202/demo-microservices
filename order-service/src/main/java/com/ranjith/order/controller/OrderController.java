@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ranjith.order.dto.ApiResponse;
-import com.ranjith.order.dto.ProductOrderDto;
-import com.ranjith.order.dto.ProductOrderPatchDto;
+import com.dto.main.ApiResponse;
+import com.dto.main.ProductOrderDto;
+import com.dto.main.ProductOrderPatchDto;
 import com.ranjith.order.service.OrderService;
 import com.ranjith.order.util.ResponseHandler;
 

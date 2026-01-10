@@ -3,6 +3,8 @@ package com.ranjith.order.config;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class BasicConfiguration {
@@ -14,5 +16,14 @@ public class BasicConfiguration {
         .setSkipNullEnabled(true);        // 🚀 Prevent null overriding
 
         return mapper;
+	}
+	
+	@Bean
+	SecurityFilterChain apiSecurity(HttpSecurity http) throws Exception {
+
+		http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth -> 
+		auth.requestMatchers("/**").permitAll());
+		return http.build();
+
 	}
 }

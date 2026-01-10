@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ranjith.product.dto.ApiResponse;
-import com.ranjith.product.dto.PatchUpdateDto;
-import com.ranjith.product.dto.ProductDto;
+import com.dto.main.ApiResponse;
+import com.dto.main.PatchUpdateDto;
+import com.dto.main.ProductDto;
 import com.ranjith.product.service.ProductService;
 import com.ranjith.product.util.ResponseHandler;
 

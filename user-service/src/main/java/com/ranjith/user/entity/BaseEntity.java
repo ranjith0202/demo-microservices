@@ -2,9 +2,11 @@ package com.ranjith.user.entity;
 
 import java.time.LocalDateTime;
 
-import jakarta.annotation.PostConstruct;
+import com.ranjith.user.util.SecurityUtil;
+
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import lombok.Data;
 
 @Data
@@ -19,11 +21,13 @@ public class BaseEntity {
 	public void onCreate() {
 		this.createdTime = LocalDateTime.now();
 		this.modifiedTime = LocalDateTime.now();
+		this.createdBy = SecurityUtil.getCurrentUsername();
 	}
 	
-	@PostConstruct
+	@PreUpdate
 	public void onUpdate() {
 		this.modifiedTime = LocalDateTime.now();
+		this.modifiedBy = SecurityUtil.getCurrentUsername();
 	}
 	
 }

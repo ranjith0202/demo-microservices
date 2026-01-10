@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.ranjith.authservice.dto.ApiResponse;
-import com.ranjith.authservice.dto.UserDto;
+import com.dto.main.ApiResponse;
+import com.dto.main.UserDto;
 
 @FeignClient(name = "USER-SERVICE")
 public interface UserServiceClient {

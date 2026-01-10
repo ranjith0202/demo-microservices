@@ -5,8 +5,8 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.ranjith.product.dto.PatchUpdateDto;
-import com.ranjith.product.dto.ProductDto;
+import com.dto.main.PatchUpdateDto;
+import com.dto.main.ProductDto;
 import com.ranjith.product.entity.Product;
 import com.ranjith.product.repository.ProductRepository;
 

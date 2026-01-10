@@ -5,8 +5,8 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.ranjith.order.dto.ProductOrderDto;
-import com.ranjith.order.dto.ProductOrderPatchDto;
+import com.dto.main.ProductOrderDto;
+import com.dto.main.ProductOrderPatchDto;
 import com.ranjith.order.entity.ProductOrder;
 import com.ranjith.order.exception.ResourceNotFoundException;
 import com.ranjith.order.repository.OrderRepository;

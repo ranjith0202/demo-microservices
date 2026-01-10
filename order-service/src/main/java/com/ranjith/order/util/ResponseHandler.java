@@ -3,7 +3,7 @@ package com.ranjith.order.util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.ranjith.order.dto.ApiResponse;
+import com.dto.main.ApiResponse;
 
 public class ResponseHandler {
 	

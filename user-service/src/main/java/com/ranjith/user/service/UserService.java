@@ -1,9 +1,6 @@
 package com.ranjith.user.service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -11,9 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.ranjith.user.dto.UserDto;
-import com.ranjith.user.dto.UserPatchDto;
-import com.ranjith.user.entity.Roles;
+import com.dto.main.UserDto;
+import com.dto.main.UserPatchDto;
 import com.ranjith.user.entity.UserEntity;
 import com.ranjith.user.exception.ResourceNotFoundException;
 import com.ranjith.user.repository.RolesInterface;
