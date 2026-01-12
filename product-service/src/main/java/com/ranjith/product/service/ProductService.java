@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.dto.main.dto.PatchUpdateDto;
 import com.dto.main.dto.ProductDto;
+import com.dto.main.exception.ResourceNotFoundException;
 import com.ranjith.product.entity.Product;
-import com.ranjith.product.exception.ResourceNotFoundException;
 import com.ranjith.product.repository.ProductRepository;
 
 @Service

@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.dto.main.dto.UserDto;
 import com.dto.main.dto.UserPatchDto;
+import com.dto.main.exception.ResourceNotFoundException;
 import com.ranjith.user.entity.UserEntity;
-import com.ranjith.user.exception.ResourceNotFoundException;
 import com.ranjith.user.repository.RolesInterface;
 import com.ranjith.user.repository.UserRepository;
 

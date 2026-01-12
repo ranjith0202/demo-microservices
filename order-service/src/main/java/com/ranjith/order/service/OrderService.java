@@ -12,10 +12,10 @@ import com.dto.main.dto.ApiResponse;
 import com.dto.main.dto.ProductDto;
 import com.dto.main.dto.ProductOrderDto;
 import com.dto.main.dto.ProductOrderPatchDto;
+import com.dto.main.exception.CustomException;
+import com.dto.main.exception.OutOfStockException;
+import com.dto.main.exception.ResourceNotFoundException;
 import com.ranjith.order.entity.ProductOrder;
-import com.ranjith.order.exception.CustomException;
-import com.ranjith.order.exception.OutOfStockException;
-import com.ranjith.order.exception.ResourceNotFoundException;
 import com.ranjith.order.repository.OrderRepository;
 import com.ranjith.order.repository.ProductClient;
 
