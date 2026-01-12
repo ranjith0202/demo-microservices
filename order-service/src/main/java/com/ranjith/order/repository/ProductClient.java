@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.dto.main.ApiResponse;
-import com.dto.main.ProductDto;
+import com.dto.main.dto.ApiResponse;
+import com.dto.main.dto.ProductDto;
 
 @FeignClient(name = "PRODUCT-SERVICE")
 public interface ProductClient {

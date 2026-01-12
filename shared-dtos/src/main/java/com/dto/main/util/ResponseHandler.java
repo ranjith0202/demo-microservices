@@ -1,9 +1,9 @@
-package com.dto.main;
+package com.dto.main.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.dto.main.ApiResponse;
+import com.dto.main.dto.ApiResponse;
 
 public class ResponseHandler {
 	/**

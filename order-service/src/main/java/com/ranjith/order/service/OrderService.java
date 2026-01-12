@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.dto.main.ApiResponse;
-import com.dto.main.ProductDto;
-import com.dto.main.ProductOrderDto;
-import com.dto.main.ProductOrderPatchDto;
+import com.dto.main.dto.ApiResponse;
+import com.dto.main.dto.ProductDto;
+import com.dto.main.dto.ProductOrderDto;
+import com.dto.main.dto.ProductOrderPatchDto;
 import com.ranjith.order.entity.ProductOrder;
 import com.ranjith.order.exception.CustomException;
 import com.ranjith.order.exception.OutOfStockException;

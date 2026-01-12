@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
-import com.dto.main.ApiResponse;
-import com.dto.main.UserDto;
+import com.dto.main.dto.ApiResponse;
+import com.dto.main.dto.UserDto;
 import com.ranjith.authservice.dto.LoginRequest;
 import com.ranjith.authservice.repositoy.UserServiceClient;
 import com.ranjith.authservice.util.JwtUtil;

@@ -1,4 +1,4 @@
-package com.dto.main;
+package com.dto.main.dto;
 
 import java.util.Set;
 

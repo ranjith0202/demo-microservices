@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dto.main.ApiResponse;
-import com.dto.main.PatchUpdateDto;
-import com.dto.main.ProductDto;
-import com.dto.main.ResponseHandler;
+import com.dto.main.dto.ApiResponse;
+import com.dto.main.dto.PatchUpdateDto;
+import com.dto.main.dto.ProductDto;
+import com.dto.main.util.ResponseHandler;
 import com.ranjith.product.service.ProductService;
 
 import jakarta.validation.Valid;

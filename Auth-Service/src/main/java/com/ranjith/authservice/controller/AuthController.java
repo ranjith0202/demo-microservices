@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dto.main.UserDto;
+import com.dto.main.dto.UserDto;
 import com.ranjith.authservice.dto.LoginRequest;
 import com.ranjith.authservice.service.AuthService;
 

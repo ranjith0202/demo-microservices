@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.dto.main.ApiResponse;
-import com.dto.main.ResponseHandler;
+import com.dto.main.dto.ApiResponse;
+import com.dto.main.util.ResponseHandler;
 
 
 @RestControllerAdvice

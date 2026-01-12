@@ -1,4 +1,4 @@
-package com.dto.main;
+package com.dto.main.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

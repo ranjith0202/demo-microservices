@@ -1,4 +1,4 @@
-package com.dto.main;
+package com.dto.main.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
 	public ResourceNotFoundException() {
