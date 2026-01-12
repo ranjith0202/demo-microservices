@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dto.main.ApiResponse;
 import com.dto.main.ProductOrderDto;
 import com.dto.main.ProductOrderPatchDto;
+import com.dto.main.ResponseHandler;
 import com.ranjith.order.service.OrderService;
-import com.ranjith.order.util.ResponseHandler;
 
 import jakarta.validation.Valid;
 
@@ -67,5 +67,11 @@ public class OrderController {
 		(@Valid @RequestBody ProductOrderPatchDto orderDto,@PathVariable Long id){
 		ProductOrderDto productOrderDto = orderService.PatchOrder(id, orderDto);
 		return ResponseHandler.success("Order Updated Succesfully", productOrderDto, HttpStatus.OK);
+	}
+	
+	@PostMapping("/place")
+	public ResponseEntity<ApiResponse<ProductOrderDto>> placeOrder(@Valid @RequestBody ProductOrderDto orderDto){
+		orderDto = orderService.placeOrder(orderDto);
+		return ResponseHandler.success("Order Placed Succesfully", orderDto, HttpStatus.CREATED);
 	}
 }

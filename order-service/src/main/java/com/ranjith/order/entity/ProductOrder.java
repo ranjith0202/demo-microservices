@@ -8,36 +8,33 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "product_orders")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductOrder extends BaseEntity{
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "order_id")
     private Long id;
 
-    @NotNull(message = "Product ID is required")
     private Long productId;
 
-    @NotBlank(message = "Customer name cannot be blank")
     private String customerName;
 
-    @NotBlank(message = "Customer email is required")
-    @Email(message = "Invalid email format")
     private String customerEmail;
+    
+    @Column(name = "order_quantity")
+    private Integer orderQuantity;
 
-    @NotNull(message = "Quantity is required")
-    @Positive(message = "Quantity must be greater than zero")
-    private Integer quantity;
-
-    @NotNull(message = "Order date is required")
     private LocalDateTime orderDate;
 
-    @NotBlank(message = "Order status is required")
     private String status; // e.g., PENDING, COMPLETED, CANCELLED
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.dto.main.PatchUpdateDto;
 import com.dto.main.ProductDto;
 import com.ranjith.product.entity.Product;
+import com.ranjith.product.exception.ResourceNotFoundException;
 import com.ranjith.product.repository.ProductRepository;
 
 @Service
@@ -37,7 +38,7 @@ public class ProductService {
 		
 		return productRepository.findById(id)
 		        .map(this::convertToDto)
-		        .orElseThrow(() -> new RuntimeException("Product not found"));
+		        .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 	}
 	
 	public List<ProductDto> findAllProducts(){
@@ -48,7 +49,7 @@ public class ProductService {
 	
 	public ProductDto updateProduct(Long id,ProductDto productDto) {
 		Product existingproduct = productRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Product not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 		mapper.map(productDto, existingproduct);
 		Product updated = productRepository.save(existingproduct);
 		return convertToDto(updated);
@@ -56,14 +57,14 @@ public class ProductService {
 	
 	public void deleteProduct(Long id) {
 		if (!productRepository.existsById(id)) {
-		    throw new RuntimeException("Product not found");
+		    throw new ResourceNotFoundException("Product not found");
 		}
 		productRepository.deleteById(id);
 	}
 	
 	public ProductDto patchProduct(Long id,PatchUpdateDto dto) {
 		Product existingproduct = productRepository.findById(id)
-		        .orElseThrow(() -> new RuntimeException("Product not found"));
+		        .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 				mapper.map(dto, existingproduct);
 				Product updated = productRepository.save(existingproduct);
 				return convertToDto(updated);

@@ -18,9 +18,7 @@ public class ApiLoggingAspect {
     public Object logMethodAndTime(ProceedingJoinPoint pjp) throws Throwable {
         // Access method info like JoinPoint
         Object[] args = pjp.getArgs();
-        System.out.println("Method: " + pjp.getSignature());
-        System.out.println("Args: " + Arrays.toString(pjp.getArgs()));
-
+       
         logger.info("API hit: {}, Args: {}", pjp.getSignature(), Arrays.toString(args));
 
         // Proceed with execution
@@ -29,7 +27,7 @@ public class ApiLoggingAspect {
         long end = System.currentTimeMillis();
         logger.info("API completed: {}, Response: {}, Execution time: {} ms",
                 pjp.getSignature(), result, (end - start));
-        System.out.println("Execution time: " + (end - start) + "ms");
+        logger.info("Execution time: " + (end - start) + "ms");
 
         return result;
     }

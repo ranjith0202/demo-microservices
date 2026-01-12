@@ -31,8 +31,8 @@ public class Product extends BaseEntity{
 	    @Column(nullable = false)
 	    private Double price;
 
-	    @Column(nullable = false)
-	    private Integer quantity;
+	    @Column(nullable = false,name = "available_quantity")
+	    private Integer availableQuantity;
 
 	    private String category;
 

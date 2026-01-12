@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dto.main.ApiResponse;
+import com.dto.main.ResponseHandler;
 import com.dto.main.UserDto;
 import com.dto.main.UserPatchDto;
 import com.ranjith.user.service.UserService;
-import com.ranjith.user.util.ResponseHandler;
 
 import jakarta.validation.Valid;
 

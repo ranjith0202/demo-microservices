@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dto.main.ApiResponse;
 import com.dto.main.PatchUpdateDto;
 import com.dto.main.ProductDto;
+import com.dto.main.ResponseHandler;
 import com.ranjith.product.service.ProductService;
-import com.ranjith.product.util.ResponseHandler;
 
 import jakarta.validation.Valid;
 
@@ -33,7 +33,7 @@ public class ProductController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<ApiResponse<List<ProductDto>>> getAllUsers() {
+	public ResponseEntity<ApiResponse<List<ProductDto>>> getAllProducts() {
 	    List<ProductDto> allProductsList = productService.findAllProducts();
 	    return ResponseHandler.success("Products fetched successfully",allProductsList, HttpStatus.OK);
 	}
